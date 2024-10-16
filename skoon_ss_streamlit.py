@@ -41,7 +41,7 @@ if st.button('Process file'):
 
     output = BytesIO()
     with pd.ExcelWriter(output, engine = 'xlsxwriter') as writer:
-        df.to_excel(writer, index = False, sheet_name = 'Skoon - S&S orders')
+        df.to_excel(writer, sheet_name = 'Skoon - S&S orders')
         writer.close()
 
     # Rewind the buffer
