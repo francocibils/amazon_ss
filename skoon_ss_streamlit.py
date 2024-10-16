@@ -6,7 +6,7 @@ st.title('Skoon - Save & Subscribe')
 st.header('File upload')
 st.markdown('Upload txt/csv file that you downloaded from Amazon Sellercentral. This will return an Excel file where each row represents a date and the corresponding amount of Save & Subscribe orders for Skoon in that day.')
 
-file = st.file_uploader('Upload Amazon Sellercentral file', type = ['csv'])
+file = st.file_uploader('Upload Amazon Sellercentral file', type = ['csv', 'txt'])
 
 if file is not None:
     df = pd.read_csv(file, sep = '\t')
